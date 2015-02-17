@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>237F82E0-47C8-4304-8777-74C9FF4C0004</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HotelManagementAppUsingCoreData</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FC5B6BA0D7F468430484F7806F3CB643B860FA33</key>
+		<string>https://github.com/cy2/Hotel_Reservation_System.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HotelManagementAppUsingCoreData/HotelManagementAppUsingCoreData.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FC5B6BA0D7F468430484F7806F3CB643B860FA33</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cy2/Hotel_Reservation_System.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC5B6BA0D7F468430484F7806F3CB643B860FA33</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC5B6BA0D7F468430484F7806F3CB643B860FA33</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hotel_Reservation_System</string>
+		</dict>
+	</array>
+</dict>
+</plist>

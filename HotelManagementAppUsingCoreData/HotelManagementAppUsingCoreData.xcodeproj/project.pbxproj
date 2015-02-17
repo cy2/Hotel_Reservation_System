@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FF4126CC1A90BB5300314F26 /* ListAvailableRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4126CB1A90BB5300314F26 /* ListAvailableRoomsViewController.m */; };
+		FFB077761A930C2B00D77DEB /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB077751A930C2B00D77DEB /* HashTable.m */; };
+		FFB077791A930D3100D77DEB /* HashTableBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB077781A930D3100D77DEB /* HashTableBucket.m */; };
 		FFCEBC9B1A894FAD006900E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEBC9A1A894FAD006900E9 /* main.m */; };
 		FFCEBC9E1A894FAD006900E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEBC9D1A894FAD006900E9 /* AppDelegate.m */; };
 		FFCEBCA11A894FAD006900E9 /* HotelManagementAppUsingCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCEBC9F1A894FAD006900E9 /* HotelManagementAppUsingCoreData.xcdatamodeld */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		FF4126CA1A90BB5300314F26 /* ListAvailableRoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListAvailableRoomsViewController.h; path = ../ListAvailableRoomsViewController.h; sourceTree = "<group>"; };
 		FF4126CB1A90BB5300314F26 /* ListAvailableRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListAvailableRoomsViewController.m; path = ../ListAvailableRoomsViewController.m; sourceTree = "<group>"; };
+		FFB077741A930C2B00D77DEB /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = ../HashTable.h; sourceTree = "<group>"; };
+		FFB077751A930C2B00D77DEB /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = ../HashTable.m; sourceTree = "<group>"; };
+		FFB077771A930D3100D77DEB /* HashTableBucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTableBucket.h; path = ../HashTableBucket.h; sourceTree = "<group>"; };
+		FFB077781A930D3100D77DEB /* HashTableBucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTableBucket.m; path = ../HashTableBucket.m; sourceTree = "<group>"; };
 		FFCEBC951A894FAD006900E9 /* HotelManagementAppUsingCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManagementAppUsingCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCEBC991A894FAD006900E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFCEBC9A1A894FAD006900E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -163,6 +169,10 @@
 		FFCEBCDB1A8AB55C006900E9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FFB077771A930D3100D77DEB /* HashTableBucket.h */,
+				FFB077781A930D3100D77DEB /* HashTableBucket.m */,
+				FFB077741A930C2B00D77DEB /* HashTable.h */,
+				FFB077751A930C2B00D77DEB /* HashTable.m */,
 				FFCEBC9F1A894FAD006900E9 /* HotelManagementAppUsingCoreData.xcdatamodeld */,
 				FFCEBCCD1A89579C006900E9 /* seed.json */,
 				FFCEBCF01A8C4035006900E9 /* Hotel.h */,
@@ -310,6 +320,7 @@
 			files = (
 				FFCEBCF51A8C404D006900E9 /* Room.m in Sources */,
 				FFCEBCF21A8C4035006900E9 /* Hotel.m in Sources */,
+				FFB077761A930C2B00D77DEB /* HashTable.m in Sources */,
 				FFCEBCFE1A8C5C4A006900E9 /* CoreDataStack.m in Sources */,
 				FFCEBC9E1A894FAD006900E9 /* AppDelegate.m in Sources */,
 				FFCEBCDA1A8AB16E006900E9 /* RoomListViewController.m in Sources */,
@@ -319,6 +330,7 @@
 				FFCEBC9B1A894FAD006900E9 /* main.m in Sources */,
 				FFCEBD041A8C6623006900E9 /* ReservationListViewController.m in Sources */,
 				FFCEBD011A8C5F36006900E9 /* HotelService.m in Sources */,
+				FFB077791A930D3100D77DEB /* HashTableBucket.m in Sources */,
 				FFCEBCEF1A8AEBBD006900E9 /* RoomAvailabilityViewController.m in Sources */,
 				FF4126CC1A90BB5300314F26 /* ListAvailableRoomsViewController.m in Sources */,
 				FFCEBCF81A8C4062006900E9 /* Reservation.m in Sources */,
