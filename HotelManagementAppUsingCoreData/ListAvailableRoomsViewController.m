@@ -47,7 +47,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Room_Available_Cell" forIndexPath:indexPath];
     
     Room *room = self.allAvailableRoomsToReserve[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"Room %@ available", room.number];
+    cell.textLabel.text = [NSString stringWithFormat:@"Room %@", room.number];
     
     return cell;
     

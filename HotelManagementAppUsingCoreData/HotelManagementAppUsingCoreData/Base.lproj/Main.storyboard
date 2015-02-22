@@ -352,26 +352,29 @@
                                     <segue destination="mQO-yW-K79" kind="show" id="d50-l7-drl"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jDC-2m-kGs">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jDC-2m-kGs">
                                 <rect key="frame" x="101" y="100" width="399" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="dmk-OS-ZOo"/>
+                                </constraints>
                                 <segments>
-                                    <segment title="Decent Inn"/>
-                                    <segment title="Okay Motel"/>
                                     <segment title="Solid Stay"/>
+                                    <segment title="Decent Inn"/>
                                     <segment title="Fancy Estates"/>
+                                    <segment title="Okay Motel"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="2QA-Q7-HqJ" secondAttribute="centerX" id="6p3-EX-vXn"/>
-                            <constraint firstAttribute="centerX" secondItem="jDC-2m-kGs" secondAttribute="centerX" id="YsJ-wI-6VN"/>
+                            <constraint firstItem="2QA-Q7-HqJ" firstAttribute="top" secondItem="jDC-2m-kGs" secondAttribute="bottom" constant="8" symbolic="YES" id="8FX-of-xqr"/>
                             <constraint firstAttribute="centerX" secondItem="4gG-BI-4CN" secondAttribute="centerX" id="aXe-1K-aO7"/>
                             <constraint firstItem="4gG-BI-4CN" firstAttribute="top" secondItem="s0G-tc-lh7" secondAttribute="bottom" constant="17" id="akx-M8-gNA"/>
                             <constraint firstItem="s0G-tc-lh7" firstAttribute="top" secondItem="2QA-Q7-HqJ" secondAttribute="bottom" constant="8" id="eNk-iz-wTF"/>
-                            <constraint firstItem="jDC-2m-kGs" firstAttribute="top" secondItem="URM-zZ-87u" secondAttribute="bottom" constant="36" id="hsG-xX-VRd"/>
+                            <constraint firstItem="jDC-2m-kGs" firstAttribute="top" secondItem="URM-zZ-87u" secondAttribute="bottom" constant="36" id="fs8-Wd-y1Z"/>
                             <constraint firstAttribute="centerX" secondItem="s0G-tc-lh7" secondAttribute="centerX" id="iaV-WA-jQ7"/>
-                            <constraint firstItem="2QA-Q7-HqJ" firstAttribute="top" secondItem="jDC-2m-kGs" secondAttribute="bottom" constant="8" id="zJY-pw-urS"/>
+                            <constraint firstItem="jDC-2m-kGs" firstAttribute="centerX" secondItem="2QA-Q7-HqJ" secondAttribute="centerX" id="ucg-5H-8l8"/>
                         </constraints>
                     </view>
                     <connections>

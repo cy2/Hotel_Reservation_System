@@ -54,22 +54,27 @@
 
     
     
+    
     //query - logic isn't right yet (Needs a hotel to have at least one reservation to work
     
-        //give me room numbers in hotel if that hotel has a booking
-            NSPredicate *JustHotelQueryString = [NSPredicate predicateWithFormat:@"self.room.hotel.name==%@",selectedHotel];
+    //give me room numbers in hotel if that hotel has a booking
+    NSPredicate *JustHotelQueryString = [NSPredicate predicateWithFormat:@"self.room.hotel.name==%@",selectedHotel];
     
-        //can I get rooms booked for a selected date range, if that hotel has a booking
-            NSPredicate *justDatesQueryString = [NSPredicate predicateWithFormat:@"(startDate <= %@ AND endDate >= %@)",self.endDatePicker.date, self.startDatePicker.date];
+    //can I get rooms booked for a selected date range
+    NSPredicate *justDatesQueryString = [NSPredicate predicateWithFormat:@"(startDate <= %@ AND endDate >= %@)",self.endDatePicker.date, self.startDatePicker.date];
     
-        //give me room numbers reserved for selected hotel for a selected date range, if that hotel has a booking
-            NSPredicate *bookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate >= %@ AND endDate <= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
 
-    //give me room numbers for selected hotel not in a selected date range,if that hotel has a booking
-                NSPredicate *unbookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate <= %@ AND endDate >= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
+    //give me room numbers that are reserved for selected hotel in a selected date range
+    NSPredicate *bookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate <= %@ AND endDate >= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
     
     
-    fetchOnRequestTable.predicate = unbookedDatesForHotelQueryString;
+    //give me room numbers that are reserved for selected hotel in a selected date range excluding (above) room numbers that are reserved for selected hotel in a selected date range
+    //NSPredicate *unbookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(startDate >= %@ AND endDate <= %@) && NOT EXISTS (self.room.hotel.name==%@) && (startDate <= %@ AND endDate >= %@)",self.startDatePicker.date, self.endDatePicker,selectedHotel,self.startDatePicker.date, self.endDatePicker];
+   
+    //what is the predicate for excluding (like NOT EXISTS) in sql? - just showing booked rooms for now
+
+    
+    fetchOnRequestTable.predicate = bookedDatesForHotelQueryString;
     
     
     NSError *fetchError;
