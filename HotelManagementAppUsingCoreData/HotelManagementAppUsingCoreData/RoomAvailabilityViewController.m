@@ -54,19 +54,22 @@
 
     
     
-    //query parameters
+    //query - logic isn't right yet (Needs a hotel to have at least one reservation to work
     
-        //can I get the data for just the hotel name
+        //give me room numbers in hotel if that hotel has a booking
             NSPredicate *JustHotelQueryString = [NSPredicate predicateWithFormat:@"self.room.hotel.name==%@",selectedHotel];
     
-        //can I get data for the selected date range?
+        //can I get rooms booked for a selected date range, if that hotel has a booking
             NSPredicate *justDatesQueryString = [NSPredicate predicateWithFormat:@"(startDate <= %@ AND endDate >= %@)",self.endDatePicker.date, self.startDatePicker.date];
     
-        //can I get the data for all rooms reserved for selected hotel exc
-            NSPredicate *datesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate <= %@ AND endDate >= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
+        //give me room numbers reserved for selected hotel for a selected date range, if that hotel has a booking
+            NSPredicate *bookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate >= %@ AND endDate <= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
 
+    //give me room numbers for selected hotel not in a selected date range,if that hotel has a booking
+                NSPredicate *unbookedDatesForHotelQueryString = [NSPredicate predicateWithFormat:@"(self.room.hotel.name==%@) && (startDate <= %@ AND endDate >= %@)",selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
     
-    fetchOnRequestTable.predicate = datesForHotelQueryString;
+    
+    fetchOnRequestTable.predicate = unbookedDatesForHotelQueryString;
     
     
     NSError *fetchError;

@@ -53,13 +53,13 @@
         //guest.firstName = @"Carol";
         //guest.lastName = @"Young";
         guest.firstName = self.firstName.text;
-        [_firstName resignFirstResponder];
-    
         guest.lastName = self.lastName.text;
-        [_lastName resignFirstResponder];
-    
         reservation.guest = guest;
     
+    
+    [_firstName resignFirstResponder];
+    [_lastName resignFirstResponder];
+
     
     NSLog(@"guest.firstName =  %@",guest.firstName);
     NSLog(@"guest.lastName = %@",guest.lastName);
